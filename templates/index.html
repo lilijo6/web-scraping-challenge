@@ -25,8 +25,8 @@
         <!-- News Section -->
         <div class="container">
             <h3>Latest Mars News</h3>
-            <h6>{{ mars_data.Mars_News_Title }}</h6>
-            <p>{{ mars_data.Mars_News_Paragraph }}</p>
+            <h6>{{ mars.Mars_News_Title }}</h6>
+            <p>{{ mars.Mars_News_Paragraph }}</p>
         </div>
 
         <div class="container">
@@ -34,18 +34,14 @@
                 <!-- Left Image-->
                 <div class="col-lg-8 col-md-8 col-sm-12">
                     <h3>Featured Mars Image</h3>
-                    <img src="{{ mars_data.Mars_Featured_Image }}" style="max-width:100%; max-height: auto;" alt="Mars Featured Image">
+                    <img src="{{mars.Mars_Featured_Image}}" style="max-width:100%; max-height: auto;" alt="Mars Featured Image">
                 </div>
 
                 <!-- Table -->
                 <div class="col-lg-4 col-md-4 col-sm-12">
-
-
-                    <!-- Table -->
-                    <br>
                     <h3>Mars Facts</h3>
                     <div style="max-width: 450px; max-height: 150px; font-size: 15px; margin-bottom: 65px;">
-                        {{ mars_data.Mars_Facts|safe}}
+                        {{ mars.Mars_Facts | safe}}
                     </div>
                 </div>
                 <!-- col4 -->
@@ -60,7 +56,7 @@
             <hr>
             <div class="col-md-12">
                 <div class="row">
-                    {% for item in mars_data.Mars_Hemisphere_Images %}
+                    {% for item in mars.Mars_Hemisphere_Images %}
                     <div class="col-md-6">
                         <div class="card text-white bg-dark" style="margin: 30px;">
                             <img class="card-img-top" src="{{ item.img_url }}" />

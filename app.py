@@ -16,7 +16,7 @@ def index():
     marspage = mongo.db.marspage.find_one()
 
     # Return template and data
-    return render_template("index.html", marspage=marspage)
+    return render_template("index.html", mars=marspage)
 
 
 # Route that will trigger the scrape function
@@ -32,8 +32,8 @@ def scrape():
     marspage.update({}, mars_data, upsert=True)
 
     # Redirect back to home page
-    #return redirect("/")
-    return "S"
+    return redirect("/")
+    
 
 if __name__ == "__main__":
     app.run(debug=True)

@@ -107,17 +107,17 @@ def scrape():
     
     print("hemisphere_image_url:", hemisphere_image_urls)
 
-    mars_data = {
+    marspage = {
         "Mars_News_Title": news_title,
         "Mars_News_Paragraph": news_p,
         "Mars_Featured_Image": featured_image_url,
-        "Mars_Facts": mars_facts_df,
+        "Mars_Facts": mars_facts_df.to_dict(orient='records'),
         "Mars_Hemisphere_Images": hemisphere_image_urls
     } 
-
+    
     browser.quit()
 
-    return mars_data
+    return marspage
 
 
       
