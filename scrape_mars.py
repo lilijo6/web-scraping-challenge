@@ -38,7 +38,7 @@ def scrape():
     #Scraping for images
     #Setting URL for Mars Space Images
     url2 = "https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars"
-    base_url = "https://www.jpl.nasa.gov"
+    base_url = "https://www.jpl.nasa.gov/"
 
     #visit url with splinter
     browser.visit(url2)
@@ -111,7 +111,8 @@ def scrape():
         "Mars_News_Title": news_title,
         "Mars_News_Paragraph": news_p,
         "Mars_Featured_Image": featured_image_url,
-        "Mars_Facts": mars_facts_df.to_dict(orient='records'),
+        #"Mars_Facts": mars_facts_df.to_dict(orient='records'),
+        "Mars_Facts": html_table_string,
         "Mars_Hemisphere_Images": hemisphere_image_urls
     } 
     

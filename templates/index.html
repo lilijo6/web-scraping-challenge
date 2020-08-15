@@ -34,7 +34,7 @@
                 <!-- Left Image-->
                 <div class="col-lg-8 col-md-8 col-sm-12">
                     <h3>Featured Mars Image</h3>
-                    <img src="{{mars.Mars_Featured_Image}}" style="max-width:100%; max-height: auto;" alt="Mars Featured Image">
+                    <img src="{{mars.Mars_Featured_Image}}" class="img-responsive" style="max-width:100%; max-height: auto;" alt="Mars Featured Image">
                 </div>
 
                 <!-- Table -->
@@ -59,7 +59,7 @@
                     {% for item in mars.Mars_Hemisphere_Images %}
                     <div class="col-md-6">
                         <div class="card text-white bg-dark" style="margin: 30px;">
-                            <img class="card-img-top" src="{{ item.img_url }}" />
+                            <img class="card-img-top" src="{{ item.image_url }}" />
                             <div class="card-body">
                                 <p class="card-text">{{ item.title }}</p>
                             </div>
